@@ -37,7 +37,7 @@ const ProjectCard = ({members, lastUpdate, color, title}: ProjectCardProps) => {
     const randomDelay = animationDelays[Math.floor(Math.random() * animationDelays.length)];
 
     return (
-        <div className="relative overflow-hidden border rounded-md hover:border-white/30 transition-all duration-300">
+        <div className="relative overflow-hidden border rounded-md hover:border-primary/30 transition-all duration-300">
             <div className="bg-card/60 backdrop-blur-3xl p-4 cursor-pointer">
                 <div className="flex flex-row justify-start space-x-2 items-center mb-4">
                     <div className={"p-2 border rounded-md " + randomColor}>

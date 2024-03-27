@@ -46,5 +46,5 @@ export const projects = [
         members: 1,
         lastUpdated: "2021-10-03",
         color: "bg-gray-500",
-    },
+    }
 ];

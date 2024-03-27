@@ -1,7 +1,6 @@
-import {File} from "lucide-react";
+import {File, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {DotsHorizontalIcon} from "@radix-ui/react-icons";
-import {Avatar, AvatarFallback} from "@/components/ui/avatar";
 
 type ProjectCardProps = {
     members?: number;
@@ -49,14 +48,12 @@ const ProjectCard = ({members, lastUpdate, color, title}: ProjectCardProps) => {
                     </Button>
                 </div>
                 <div>
-                    <div className="flex -space-x-4 overflow-hidden my-4">
+                    <div className="flex -space-x-3 overflow-hidden my-4">
                         {
                             Array.from({length: members ? members : 1}, (_, i) => (
-                                <Avatar key={i}>
-                                    <AvatarFallback>{
-                                        `M${i + 1}`
-                                    }</AvatarFallback>
-                                </Avatar>
+                                <div className="rounded-full bg-background text-muted-foreground p-1 border">
+                                    <User/>
+                                </div>
                             ))
                         }
                     </div>

@@ -2,16 +2,19 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import {ThemeChanger} from "@/app/(mainLayout)/ThemeChanger";
 import {Button} from "@/components/ui/button";
-import {PlusIcon} from "lucide-react";
+import {Lightbulb, PlusIcon} from "lucide-react";
 
 
 export default function MainLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
         <>
-            <div className="relative mx-8 flex flex-row justify-between items-center my-4">
-                <h3>
-                    Logo
-                </h3>
+            <div className="relative mx-8 flex flex-row justify-between items-center my-7">
+                <div className="flex flex-row items-center justify-center">
+                    <Lightbulb className="h-8 w-8 inline-block mr-2"/>
+                    <h2 className="text-2xl font-bold">
+                        CreatiQuik
+                    </h2>
+                </div>
                 <div className="flex flex-row justify-between items-center space-x-2">
                     <Button variant="ghost" size="icon">
                         <PlusIcon className="h-6 w-6"/>

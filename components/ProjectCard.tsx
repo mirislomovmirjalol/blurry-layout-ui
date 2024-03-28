@@ -43,20 +43,17 @@ const ProjectCard = ({members, lastUpdate, color, title}: ProjectCardProps) => {
                         <File className="h-4 w-4 text-white"/>
                     </div>
                     <h2 className="flex-1">{title ? title : "No project title"}</h2>
-                    <Button variant="blur">
-                        <DotsHorizontalIcon className="h-4 w-4"/>
-                    </Button>
                 </div>
                 <div>
-                    <div className="flex -space-x-3 overflow-hidden my-4">
+                    <ul className="flex -space-x-3 overflow-hidden my-4">
                         {
                             Array.from({length: members ? members : 1}, (_, i) => (
-                                <div className="rounded-full bg-background text-muted-foreground p-1 border">
+                                <li key={`member-${i}`} className="rounded-full bg-background text-muted-foreground p-1 border">
                                     <User/>
-                                </div>
+                                </li>
                             ))
                         }
-                    </div>
+                    </ul>
                 </div>
                 <p className="text-muted-foreground text-sm">
                     {lastUpdate ? `Last updated ${lastUpdate}` : "No updates yet"}

@@ -13,7 +13,9 @@ export default function MainLayout({children}: Readonly<{ children: React.ReactN
                 <ThemeChanger/>
             </div>
             <Navbar/>
+            <div className="mx-8">
             {children}
+            </div>
             {/*<div*/}
             {/*    className="absolute top-1/4 left-8 rounded-full h-32 w-32 -z-20 blur-3xl bg-primary/30 animate-blob"/>*/}
         {/*<div*/}

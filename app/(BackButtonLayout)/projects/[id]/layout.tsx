@@ -12,7 +12,7 @@ export default function layout({children, params}: { children: React.ReactNode, 
             <motion.div
                 animate={{opacity: [0, 1]}}
                 transition={{duration: 2}}
-                className={cn("absolute -top-52 -left-20 rounded-full h-64 w-64 -z-20 blur-3xl animate-blob", bubbleColor)}/>
+                className={cn("absolute -top-36 -left-20 rounded-full h-64 w-64 -z-20 blur-3xl animate-blob", bubbleColor)}/>
         </>
     )
 }
